@@ -1,0 +1,34 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Value Set Workbench\n\n\nAbout", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#value-set-workbench", 
+            "text": "", 
+            "title": "Value Set Workbench"
+        }, 
+        {
+            "location": "/#about", 
+            "text": "", 
+            "title": "About"
+        }, 
+        {
+            "location": "/installation/", 
+            "text": "", 
+            "title": "Installation"
+        }, 
+        {
+            "location": "/user_guide/", 
+            "text": "", 
+            "title": "User Guide"
+        }, 
+        {
+            "location": "/admininstration/", 
+            "text": "", 
+            "title": "Admininstration"
+        }
+    ]
+}
