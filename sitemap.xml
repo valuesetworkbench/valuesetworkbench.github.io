@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-06-27</lastmod>
+     <lastmod>2017-07-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,23 +12,39 @@
     
     <url>
      <loc>/installation/</loc>
-     <lastmod>2017-06-27</lastmod>
+     <lastmod>2017-07-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>/user_guide/</loc>
-     <lastmod>2017-06-27</lastmod>
+     <loc>/custom_oauth/</loc>
+     <lastmod>2017-07-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>/admininstration/</loc>
-     <lastmod>2017-06-27</lastmod>
+     <loc>/components/</loc>
+     <lastmod>2017-07-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/research/</loc>
+     <lastmod>2017-07-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/links/</loc>
+     <lastmod>2017-07-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     

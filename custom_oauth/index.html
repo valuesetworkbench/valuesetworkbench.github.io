@@ -16,7 +16,7 @@
     
     
       
-        <title>Installation - Value Set Workbench</title>
+        <title>Custom OAuth2 - Value Set Workbench</title>
       
     
     
@@ -73,7 +73,7 @@
             
               
             
-            Installation
+            Custom OAuth2
           
         </span>
       </div>
@@ -144,6 +144,18 @@
       
       
 
+
+  <li class="md-nav__item">
+    <a href="../installation/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
@@ -155,11 +167,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Installation
+        Custom OAuth2
       </label>
     
-    <a href="./" title="Installation" class="md-nav__link md-nav__link--active">
-      Installation
+    <a href="./" title="Custom OAuth2" class="md-nav__link md-nav__link--active">
+      Custom OAuth2
     </a>
     
       
@@ -173,50 +185,9 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
-    Prerequisites
+  <a href="#adding-your-custom-oauth2-strategy" title="Adding Your Custom OAuth2 Strategy" class="md-nav__link">
+    Adding Your Custom OAuth2 Strategy
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation-steps" title="Installation Steps" class="md-nav__link">
-    Installation Steps
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuration-options" title="Configuration Options" class="md-nav__link">
-    Configuration Options
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#external-host-name" title="External Host Name" class="md-nav__link">
-    External Host Name
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#custom-oauth2" title="Custom OAuth2" class="md-nav__link">
-    Custom OAuth2
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#custom-ssl" title="Custom SSL" class="md-nav__link">
-    Custom SSL
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -226,18 +197,6 @@
   
 </nav>
     
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../custom_oauth/" title="Custom OAuth2" class="md-nav__link">
-      Custom OAuth2
-    </a>
   </li>
 
     
@@ -298,50 +257,9 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
-    Prerequisites
+  <a href="#adding-your-custom-oauth2-strategy" title="Adding Your Custom OAuth2 Strategy" class="md-nav__link">
+    Adding Your Custom OAuth2 Strategy
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation-steps" title="Installation Steps" class="md-nav__link">
-    Installation Steps
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuration-options" title="Configuration Options" class="md-nav__link">
-    Configuration Options
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#external-host-name" title="External Host Name" class="md-nav__link">
-    External Host Name
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#custom-oauth2" title="Custom OAuth2" class="md-nav__link">
-    Custom OAuth2
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#custom-ssl" title="Custom SSL" class="md-nav__link">
-    Custom SSL
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -360,54 +278,108 @@
               
                 
                 
-                <h1 id="installation">Installation</h1>
-<p>The Value Set Workbench includes a <a href="https://docs.docker.com/compose/">Docker Compose</a>-based system for deploying the suite of tools comprising the Value Set Workbench.</p>
-<p>The following components will be installed:</p>
-<ul>
-<li><a href="https://github.com/valuesetworkbench/valueset-workbench">valueset-workbench</a> - The Value Set Workbench web-based user interface.</li>
-<li><a href="https://github.com/valuesetworkbench/arangodb-service">arangodb-service</a> - A <a href="http://www.omg.org/spec/CTS2/">CTS2-compliant</a> terminology service.</li>
-<li><a href="https://github.com/valuesetworkbench/valueset-standardizer">valueset-standardizer</a> - An automated value set standardization service.</li>
-<li><a href="https://github.com/valuesetworkbench/valueset-automap">valueset-automap</a> - An automated value set mapping service.</li>
-<li>An <a href="https://www.elastic.co/products/elasticsearch">Elasticsearch</a> service.</li>
-<li>An <a href="https://www.arangodb.com/">ArangoDB</a> graph database.</li>
-</ul>
-<h2 id="prerequisites">Prerequisites</h2>
-<ul>
-<li><a href="https://docs.docker.com/engine/installation/">Docker</a> &gt;= 1.12.0</li>
-<li><a href="https://docs.docker.com/compose/install/">docker-compose</a> &gt;= 1.8.0</li>
-</ul>
-<h2 id="installation-steps">Installation Steps</h2>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git clone https://github.com/valuesetworkbench/valueset-workbench-docker.git
-cd valueset-workbench-docker
-./start.sh
+                <h1 id="custom-oauth2">Custom OAuth2</h1>
+<h2 id="adding-your-custom-oauth2-strategy">Adding Your Custom OAuth2 Strategy</h2>
+<p>Custom OAuth2 strategies may be placed in the following directory:
+<code>valueset-workbench-docker/valueset-workbench/auth</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Files must be prefixed with <code>custom-</code> - for example, <code>custom-myauth.js</code></p>
+</div>
+<p>OAuth2 implementations are handled by <a href="http://passportjs.org/">Passport</a>. An example implementation is shown below.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">passport</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;passport&#39;</span><span class="p">),</span>
+    <span class="nx">jwt</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;jsonwebtoken&#39;</span><span class="p">),</span>
+    <span class="nx">request</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;request&#39;</span><span class="p">),</span>
+    <span class="nx">config</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;../config&#39;</span><span class="p">),</span>
+    <span class="nx">OAuth2Strategy</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;passport-oauth2&#39;</span><span class="p">);</span>
+
+<span class="c1">// Give your custom OAuth2 strategy a unique name</span>
+<span class="kd">var</span> <span class="nx">providerName</span> <span class="o">=</span> <span class="s2">&quot;mycompany&quot;</span><span class="p">;</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+
+    <span class="c1">// Register your strategy. The logo will be shown on the login page</span>
+    <span class="nx">passport</span><span class="p">.</span><span class="nx">register</span><span class="p">({</span>
+        <span class="nx">name</span><span class="o">:</span> <span class="nx">providerName</span><span class="p">,</span>
+        <span class="nx">logo</span><span class="o">:</span> <span class="s2">&quot;https://your/server/logo.jpg&quot;</span>
+    <span class="p">});</span>
+
+    <span class="c1">// Custom OAuth2 strategy. You can hardcode your setup here,</span>
+    <span class="c1">// but it is usually preferred to set these parameters via &#39;process.env&#39; variables.</span>
+    <span class="c1">// Note: Generally, &#39;callbackURL&#39; shouldn&#39;t change from what is shown.</span>
+    <span class="nx">passport</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">providerName</span><span class="p">,</span> <span class="k">new</span> <span class="nx">OAuth2Strategy</span><span class="p">({</span>
+            <span class="nx">authorizationURL</span><span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">MYCOMPANY_AUTH_URL</span> <span class="o">||</span> <span class="s1">&#39;none&#39;</span><span class="p">,</span>
+            <span class="nx">tokenURL</span><span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">MYCOMPANY_TOKEN_URL</span> <span class="o">||</span> <span class="s1">&#39;none&#39;</span><span class="p">,</span>
+            <span class="nx">clientID</span><span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">MYCOMPANY_CLIENT_ID</span> <span class="o">||</span> <span class="s1">&#39;none&#39;</span><span class="p">,</span>
+            <span class="nx">callbackURL</span><span class="o">:</span> <span class="nx">config</span><span class="p">.</span><span class="nx">externalUrl</span> <span class="o">+</span> <span class="s2">&quot;/auth/&quot;</span> <span class="o">+</span> <span class="nx">providerName</span> <span class="o">+</span> <span class="s2">&quot;/callback&quot;</span> <span class="c1">// don&#39;t change this</span>
+        <span class="p">},</span>
+        <span class="kd">function</span> <span class="p">(</span><span class="nx">accessToken</span><span class="p">,</span> <span class="nx">refreshToken</span><span class="p">,</span> <span class="nx">profile</span><span class="p">,</span> <span class="nx">cb</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">decoded</span> <span class="o">=</span> <span class="nx">jwt</span><span class="p">.</span><span class="nx">decode</span><span class="p">(</span><span class="nx">accessToken</span><span class="p">);</span>
+
+            <span class="c1">// Adjust these based on your specific JWT claims</span>
+            <span class="kd">var</span> <span class="nx">user</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="nx">firstName</span><span class="o">:</span> <span class="nx">decoded</span><span class="p">.</span><span class="nx">givenName</span><span class="p">,</span>
+                <span class="nx">lastName</span><span class="o">:</span> <span class="nx">decoded</span><span class="p">.</span><span class="nx">familyName</span><span class="p">,</span>
+                <span class="nx">username</span><span class="o">:</span> <span class="nx">decoded</span><span class="p">.</span><span class="nx">myCompanyID</span><span class="p">,</span>
+                <span class="nx">displayName</span><span class="o">:</span> <span class="nx">decoded</span><span class="p">.</span><span class="nx">displayName</span><span class="p">,</span>
+                <span class="nx">email</span><span class="o">:</span> <span class="nx">decoded</span><span class="p">.</span><span class="nx">email</span><span class="p">,</span>
+                <span class="nx">provider</span><span class="o">:</span> <span class="nx">providerName</span>
+            <span class="p">};</span>
+
+            <span class="k">return</span> <span class="nx">cb</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">user</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">));</span>
+
+<span class="p">};</span>
 </pre></div>
 </td></tr></table>
-
-<p>By default, when started the Value Set Workbench will be available at https://localhost/</p>
-<p>On a Mac, you will need to substitute <code>localhost</code> with the IP address the Docker Machine. You can find this address by running <code>docker-machine ip</code>.</p>
-<h2 id="configuration-options">Configuration Options</h2>
-<h3 id="external-host-name">External Host Name</h3>
-<p>If you are deplying the Value Set Workbench in a production environment, you may need to tell it the hostname where it will be accessed. This is necessary for several functions including OAuth2 callbacks.</p>
-<p>You may sepecify an external host via the <code>start.sh</code> script:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>./start.sh yourhost.com
-</pre></div>
-</td></tr></table>
-
-<p>If you do not provide an external host parameter, default behaviour depends on the deployment operating system:</p>
-<ul>
-<li><strong>Linux</strong> - <code>localhost</code></li>
-<li><strong>OSX</strong> - the result of <code>docker-machine ip</code></li>
-</ul>
-<h3 id="custom-oauth2">Custom OAuth2</h3>
-<p>The Value Set Workbench allows integrates with your existing OAuth2 strategy. See <a href="../custom_oauth">here for details</a>.</p>
-<h3 id="custom-ssl">Custom SSL</h3>
-<p>By default, the Value Set Workbench will deploy with a self-signed SSL certificate. To use your own, place your custom Private Key and Certificate in the following locations:</p>
-<ul>
-<li><strong>Private key:</strong> <code>valueset-workbench-docker/ssl/key.pem</code></li>
-<li><strong>Certificate:</strong> <code>valueset-workbench-docker/ssl/ca.pem</code></li>
-</ul>
                 
                   
                 
@@ -426,7 +398,7 @@ cd valueset-workbench-docker
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href=".." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../installation/" title="Installation" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -435,19 +407,19 @@ cd valueset-workbench-docker
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Home
+                Installation
               </span>
             </div>
           </a>
         
         
-          <a href="../custom_oauth/" title="Custom OAuth2" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../components/" title="Components" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Custom OAuth2
+                Components
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

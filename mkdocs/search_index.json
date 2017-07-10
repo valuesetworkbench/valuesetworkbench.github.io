@@ -2,33 +2,98 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Value Set Workbench\n\n\nAbout", 
+            "text": "A user-centered value set management tool for the enterprise.\n    \n\n    \n\n    [\nDemo\n\n    |\n    \nInstall\n\n    \n]\n  \n\n\n\n\n\n\n\nAbout\n\n\nThe Value Set Workbench is a graphical value set management tool focused on ease of use and interoperability.\n\n\nWhat is a Value Set?\n\n\nA value set is a set of codes from one or more controlled terminologies. Value sets are used anywhere a set of standardized permissible values is needed.\n\n\nGetting Started\n\n\nTry out the \npublic demo site\n.\n\n\n\n\nWarning\n\n\nThe public demo site is strictly for demonstration purposes only! Do add sensitive or proprietary information. Data will be cleaned periodically and without notice.\n\n\n\n\nThen, install the system locally using our \ninstallation guide\n.\n\n\nLicense\n\n\nAll software components released under \nApache License Version 2.0\n.", 
             "title": "Home"
         }, 
         {
-            "location": "/#value-set-workbench", 
-            "text": "", 
-            "title": "Value Set Workbench"
-        }, 
-        {
             "location": "/#about", 
-            "text": "", 
+            "text": "The Value Set Workbench is a graphical value set management tool focused on ease of use and interoperability.", 
             "title": "About"
         }, 
         {
+            "location": "/#what-is-a-value-set", 
+            "text": "A value set is a set of codes from one or more controlled terminologies. Value sets are used anywhere a set of standardized permissible values is needed.", 
+            "title": "What is a Value Set?"
+        }, 
+        {
+            "location": "/#getting-started", 
+            "text": "Try out the  public demo site .   Warning  The public demo site is strictly for demonstration purposes only! Do add sensitive or proprietary information. Data will be cleaned periodically and without notice.   Then, install the system locally using our  installation guide .", 
+            "title": "Getting Started"
+        }, 
+        {
+            "location": "/#license", 
+            "text": "All software components released under  Apache License Version 2.0 .", 
+            "title": "License"
+        }, 
+        {
             "location": "/installation/", 
-            "text": "", 
+            "text": "Installation\n\n\nThe Value Set Workbench includes a \nDocker Compose\n-based system for deploying the suite of tools comprising the Value Set Workbench.\n\n\nThe following components will be installed:\n\n\n\n\nvalueset-workbench\n - The Value Set Workbench web-based user interface.\n\n\narangodb-service\n - A \nCTS2-compliant\n terminology service.\n\n\nvalueset-standardizer\n - An automated value set standardization service.\n\n\nvalueset-automap\n - An automated value set mapping service.\n\n\nAn \nElasticsearch\n service.\n\n\nAn \nArangoDB\n graph database.\n\n\n\n\nPrerequisites\n\n\n\n\nDocker\n \n= 1.12.0\n\n\ndocker-compose\n \n= 1.8.0\n\n\n\n\nInstallation Steps\n\n\n1\n2\n3\ngit clone https://github.com/valuesetworkbench/valueset-workbench-docker.git\ncd valueset-workbench-docker\n./start.sh\n\n\n\n\n\n\nBy default, when started the Value Set Workbench will be available at https://localhost/\n\n\nOn a Mac, you will need to substitute \nlocalhost\n with the IP address the Docker Machine. You can find this address by running \ndocker-machine ip\n.\n\n\nConfiguration Options\n\n\nExternal Host Name\n\n\nIf you are deplying the Value Set Workbench in a production environment, you may need to tell it the hostname where it will be accessed. This is necessary for several functions including OAuth2 callbacks.\n\n\nYou may sepecify an external host via the \nstart.sh\n script:\n\n\n1\n./start.sh yourhost.com\n\n\n\n\n\n\nIf you do not provide an external host parameter, default behaviour depends on the deployment operating system:\n\n\n\n\nLinux\n - \nlocalhost\n\n\nOSX\n - the result of \ndocker-machine ip\n\n\n\n\nCustom OAuth2\n\n\nThe Value Set Workbench allows integrates with your existing OAuth2 strategy. See \nhere for details\n.\n\n\nCustom SSL\n\n\nBy default, the Value Set Workbench will deploy with a self-signed SSL certificate. To use your own, place your custom Private Key and Certificate in the following locations:\n\n\n\n\nPrivate key:\n \nvalueset-workbench-docker/ssl/key.pem\n\n\nCertificate:\n \nvalueset-workbench-docker/ssl/ca.pem", 
             "title": "Installation"
         }, 
         {
-            "location": "/user_guide/", 
-            "text": "", 
-            "title": "User Guide"
+            "location": "/installation/#installation", 
+            "text": "The Value Set Workbench includes a  Docker Compose -based system for deploying the suite of tools comprising the Value Set Workbench.  The following components will be installed:   valueset-workbench  - The Value Set Workbench web-based user interface.  arangodb-service  - A  CTS2-compliant  terminology service.  valueset-standardizer  - An automated value set standardization service.  valueset-automap  - An automated value set mapping service.  An  Elasticsearch  service.  An  ArangoDB  graph database.", 
+            "title": "Installation"
         }, 
         {
-            "location": "/admininstration/", 
+            "location": "/installation/#prerequisites", 
+            "text": "Docker   = 1.12.0  docker-compose   = 1.8.0", 
+            "title": "Prerequisites"
+        }, 
+        {
+            "location": "/installation/#installation-steps", 
+            "text": "1\n2\n3 git clone https://github.com/valuesetworkbench/valueset-workbench-docker.git\ncd valueset-workbench-docker\n./start.sh   By default, when started the Value Set Workbench will be available at https://localhost/  On a Mac, you will need to substitute  localhost  with the IP address the Docker Machine. You can find this address by running  docker-machine ip .", 
+            "title": "Installation Steps"
+        }, 
+        {
+            "location": "/installation/#configuration-options", 
             "text": "", 
-            "title": "Admininstration"
+            "title": "Configuration Options"
+        }, 
+        {
+            "location": "/installation/#external-host-name", 
+            "text": "If you are deplying the Value Set Workbench in a production environment, you may need to tell it the hostname where it will be accessed. This is necessary for several functions including OAuth2 callbacks.  You may sepecify an external host via the  start.sh  script:  1 ./start.sh yourhost.com   If you do not provide an external host parameter, default behaviour depends on the deployment operating system:   Linux  -  localhost  OSX  - the result of  docker-machine ip", 
+            "title": "External Host Name"
+        }, 
+        {
+            "location": "/installation/#custom-oauth2", 
+            "text": "The Value Set Workbench allows integrates with your existing OAuth2 strategy. See  here for details .", 
+            "title": "Custom OAuth2"
+        }, 
+        {
+            "location": "/installation/#custom-ssl", 
+            "text": "By default, the Value Set Workbench will deploy with a self-signed SSL certificate. To use your own, place your custom Private Key and Certificate in the following locations:   Private key:   valueset-workbench-docker/ssl/key.pem  Certificate:   valueset-workbench-docker/ssl/ca.pem", 
+            "title": "Custom SSL"
+        }, 
+        {
+            "location": "/custom_oauth/", 
+            "text": "Custom OAuth2\n\n\nAdding Your Custom OAuth2 Strategy\n\n\nCustom OAuth2 strategies may be placed in the following directory:\n\nvalueset-workbench-docker/valueset-workbench/auth\n\n\n\n\nWarning\n\n\nFiles must be prefixed with \ncustom-\n - for example, \ncustom-myauth.js\n\n\n\n\nOAuth2 implementations are handled by \nPassport\n. An example implementation is shown below.\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46\nuse strict\n;\n\n\n\nvar\n \npassport\n \n=\n \nrequire\n(\npassport\n),\n\n    \njwt\n \n=\n \nrequire\n(\njsonwebtoken\n),\n\n    \nrequest\n \n=\n \nrequire\n(\nrequest\n),\n\n    \nconfig\n \n=\n \nrequire\n(\n../config\n),\n\n    \nOAuth2Strategy\n \n=\n \nrequire\n(\npassport-oauth2\n);\n\n\n\n// Give your custom OAuth2 strategy a unique name\n\n\nvar\n \nproviderName\n \n=\n \nmycompany\n;\n\n\n\nmodule\n.\nexports\n \n=\n \nfunction\n \n()\n \n{\n\n\n    \n// Register your strategy. The logo will be shown on the login page\n\n    \npassport\n.\nregister\n({\n\n        \nname\n:\n \nproviderName\n,\n\n        \nlogo\n:\n \nhttps://your/server/logo.jpg\n\n    \n});\n\n\n    \n// Custom OAuth2 strategy. You can hardcode your setup here,\n\n    \n// but it is usually preferred to set these parameters via \nprocess.env\n variables.\n\n    \n// Note: Generally, \ncallbackURL\n shouldn\nt change from what is shown.\n\n    \npassport\n.\nuse\n(\nproviderName\n,\n \nnew\n \nOAuth2Strategy\n({\n\n            \nauthorizationURL\n:\n \nprocess\n.\nenv\n.\nMYCOMPANY_AUTH_URL\n \n||\n \nnone\n,\n\n            \ntokenURL\n:\n \nprocess\n.\nenv\n.\nMYCOMPANY_TOKEN_URL\n \n||\n \nnone\n,\n\n            \nclientID\n:\n \nprocess\n.\nenv\n.\nMYCOMPANY_CLIENT_ID\n \n||\n \nnone\n,\n\n            \ncallbackURL\n:\n \nconfig\n.\nexternalUrl\n \n+\n \n/auth/\n \n+\n \nproviderName\n \n+\n \n/callback\n \n// don\nt change this\n\n        \n},\n\n        \nfunction\n \n(\naccessToken\n,\n \nrefreshToken\n,\n \nprofile\n,\n \ncb\n)\n \n{\n\n            \nvar\n \ndecoded\n \n=\n \njwt\n.\ndecode\n(\naccessToken\n);\n\n\n            \n// Adjust these based on your specific JWT claims\n\n            \nvar\n \nuser\n \n=\n \n{\n\n                \nfirstName\n:\n \ndecoded\n.\ngivenName\n,\n\n                \nlastName\n:\n \ndecoded\n.\nfamilyName\n,\n\n                \nusername\n:\n \ndecoded\n.\nmyCompanyID\n,\n\n                \ndisplayName\n:\n \ndecoded\n.\ndisplayName\n,\n\n                \nemail\n:\n \ndecoded\n.\nemail\n,\n\n                \nprovider\n:\n \nproviderName\n\n            \n};\n\n\n            \nreturn\n \ncb\n(\nnull\n,\n \nuser\n);\n\n        \n}\n\n    \n));\n\n\n\n};", 
+            "title": "Custom OAuth2"
+        }, 
+        {
+            "location": "/custom_oauth/#custom-oauth2", 
+            "text": "", 
+            "title": "Custom OAuth2"
+        }, 
+        {
+            "location": "/custom_oauth/#adding-your-custom-oauth2-strategy", 
+            "text": "Custom OAuth2 strategies may be placed in the following directory: valueset-workbench-docker/valueset-workbench/auth   Warning  Files must be prefixed with  custom-  - for example,  custom-myauth.js   OAuth2 implementations are handled by  Passport . An example implementation is shown below.   1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46 use strict ;  var   passport   =   require ( passport ), \n     jwt   =   require ( jsonwebtoken ), \n     request   =   require ( request ), \n     config   =   require ( ../config ), \n     OAuth2Strategy   =   require ( passport-oauth2 );  // Give your custom OAuth2 strategy a unique name  var   providerName   =   mycompany ;  module . exports   =   function   ()   { \n\n     // Register your strategy. The logo will be shown on the login page \n     passport . register ({ \n         name :   providerName , \n         logo :   https://your/server/logo.jpg \n     }); \n\n     // Custom OAuth2 strategy. You can hardcode your setup here, \n     // but it is usually preferred to set these parameters via  process.env  variables. \n     // Note: Generally,  callbackURL  shouldn t change from what is shown. \n     passport . use ( providerName ,   new   OAuth2Strategy ({ \n             authorizationURL :   process . env . MYCOMPANY_AUTH_URL   ||   none , \n             tokenURL :   process . env . MYCOMPANY_TOKEN_URL   ||   none , \n             clientID :   process . env . MYCOMPANY_CLIENT_ID   ||   none , \n             callbackURL :   config . externalUrl   +   /auth/   +   providerName   +   /callback   // don t change this \n         }, \n         function   ( accessToken ,   refreshToken ,   profile ,   cb )   { \n             var   decoded   =   jwt . decode ( accessToken ); \n\n             // Adjust these based on your specific JWT claims \n             var   user   =   { \n                 firstName :   decoded . givenName , \n                 lastName :   decoded . familyName , \n                 username :   decoded . myCompanyID , \n                 displayName :   decoded . displayName , \n                 email :   decoded . email , \n                 provider :   providerName \n             }; \n\n             return   cb ( null ,   user ); \n         } \n     ));  };", 
+            "title": "Adding Your Custom OAuth2 Strategy"
+        }, 
+        {
+            "location": "/components/", 
+            "text": "Name\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nValue Set Workbench UI\n\n\nA value set management tool focused on usability, simplicity, and interoperability.\n\n\n\n\n\n\nDocker Install\n\n\nA Docker Compose-based system for deploying the suite to tools comprising the Value Set Workbench.\n\n\n\n\n\n\nAutoMap\n\n\nAn automated value set -\n value set mapping tool based on lexical similarity.\n\n\n\n\n\n\nStandardizer\n\n\nAn automated translation service to transform local value sets -\n UMLS.\n\n\n\n\n\n\nArangoDB CTS2 Service\n\n\nA CTS2-compliant terminology service based on the ArangoDB graph database.", 
+            "title": "Components"
+        }, 
+        {
+            "location": "/research/", 
+            "text": "Peterson KJ, Jiang G, Brue SM, Liu H. Leveraging terminology services for extract-transform-load processes: a user-centered approach. In: AMIA Annual Symposium Proceedings 2016 (Vol. 2016, p. 1010). American Medical Informatics Association.\n\n\nManuscript\n - \nHTML\n/\nPDF\n\n\nAbstract\n\n\n\n\nTerminology services serve an important role supporting clinical and research applications, and underpin a diverse set of processes and use cases. Through standardization efforts, terminology service-to-system interactions can leverage well-defined interfaces and predictable integration patterns. Often, however, users interact more directly with terminologies, and no such blueprints are available for describing terminology service-to-user interactions. In this work, we explore the main architecture principles necessary to build a user-centered terminology system, using an Extract-Transform-Load process as our primary usage scenario. To analyze our architecture, we present a prototype implementation based on the Common Terminology Services 2 (CTS2) standard using the Patient-Centered Network of Learning Health Systems (LHSNet) project as a concrete use case. We perform a preliminary evaluation of our prototype architecture using three architectural quality attributes: interoperability, adaptability and usability. We find that a design-time focus on user needs, cognitive models, and existing patterns is essential to maximize system utility.", 
+            "title": "Research"
+        }, 
+        {
+            "location": "/links/", 
+            "text": "ArangoDB powers the underlying \nterminology service\n used by the Value Set Workbench.\n\n\n\n\n\n\nCommon Terminology Services 2 is an \nObject Management Group\u00ae\n specification for terminology access.", 
+            "title": "Links"
         }
     ]
 }
