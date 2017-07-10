@@ -27,7 +27,7 @@ A value set is a set of codes from one or more controlled terminologies. Value s
 Try out the [public demo site](https://valuesetworkbench.mayo.edu).
 
 !!! warning
-    The public demo site is strictly for demonstration purposes only! Do add sensitive or proprietary information. Data will be cleaned periodically and without notice.
+    The public demo site is strictly for demonstration purposes only! Do NOT add sensitive or proprietary information. Data will be cleaned periodically and without notice.
 
 Then, install the system locally using our [installation guide](installation).
 
