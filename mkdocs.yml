@@ -1,5 +1,6 @@
 site_name: Value Set Workbench
 theme: material
+theme_dir: theme
 pages:
   - Home: index.md
   - Installation: installation.md
@@ -14,4 +15,10 @@ markdown_extensions:
   - markdown_include.include:
   - admonition
   - codehilite(linenums=true)
+
+copyright: "© Value Set Workbench 2017"
+extra:
+  logo: 'images/vsw_logo_transparent.png'
+extra_css:
+  - 'stylesheets/extra.css'
 

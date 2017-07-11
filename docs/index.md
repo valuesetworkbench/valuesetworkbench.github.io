@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://v4-alpha.getbootstrap.com">
-    <img src="https://avatars2.githubusercontent.com/u/20927583?v=3&s=200">
+    <img src="https://avatars2.githubusercontent.com/u/20927583?v=3&s=300">
   </a>
   <p align="center">
     A user-centered value set management tool for the enterprise.

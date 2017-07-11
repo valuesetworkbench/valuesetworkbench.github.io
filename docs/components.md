@@ -1,4 +1,4 @@
-![Value Set Workbench Architecture](arch.png)
+![Value Set Workbench Architecture](images/arch.png)
 
 
 |Name | Description|
