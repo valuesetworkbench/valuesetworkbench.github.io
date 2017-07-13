@@ -27,38 +27,48 @@
         }, 
         {
             "location": "/installation/", 
-            "text": "Installation\n\n\nThe Value Set Workbench includes a \nDocker Compose\n-based system for deploying the suite of tools comprising the Value Set Workbench.\n\n\nThe following components will be installed:\n\n\n\n\nvalueset-workbench\n - The Value Set Workbench web-based user interface.\n\n\narangodb-service\n - A \nCTS2-compliant\n terminology service.\n\n\nvalueset-standardizer\n - An automated value set standardization service.\n\n\nvalueset-automap\n - An automated value set mapping service.\n\n\nAn \nElasticsearch\n service.\n\n\nAn \nArangoDB\n graph database.\n\n\n\n\nPrerequisites\n\n\n\n\nDocker\n \n= 1.12.0\n\n\ndocker-compose\n \n= 1.8.0\n\n\n\n\nInstallation Steps\n\n\n1\n2\n3\ngit clone https://github.com/valuesetworkbench/valueset-workbench-docker.git\ncd valueset-workbench-docker\n./start.sh\n\n\n\n\n\n\nBy default, when started the Value Set Workbench will be available at https://localhost/\n\n\nOn a Mac, you will need to substitute \nlocalhost\n with the IP address the Docker Machine. You can find this address by running \ndocker-machine ip\n.\n\n\nConfiguration Options\n\n\nExternal Host Name\n\n\nIf you are deplying the Value Set Workbench in a production environment, you may need to tell it the hostname where it will be accessed. This is necessary for several functions including OAuth2 callbacks.\n\n\nYou may sepecify an external host via the \nstart.sh\n script:\n\n\n1\n./start.sh yourhost.com\n\n\n\n\n\n\nIf you do not provide an external host parameter, default behaviour depends on the deployment operating system:\n\n\n\n\nLinux\n - \nlocalhost\n\n\nOSX\n - the result of \ndocker-machine ip\n\n\n\n\nCustom OAuth2\n\n\nThe Value Set Workbench allows integrates with your existing OAuth2 strategy. See \nhere for details\n.\n\n\nCustom SSL\n\n\nBy default, the Value Set Workbench will deploy with a self-signed SSL certificate. To use your own, place your custom Private Key and Certificate in the following locations:\n\n\n\n\nPrivate key:\n \nvalueset-workbench-docker/ssl/key.pem\n\n\nCertificate:\n \nvalueset-workbench-docker/ssl/ca.pem", 
+            "text": "Installation\n\n\nThe Value Set Workbench includes a \nDocker Compose\n-based system for deploying the suite of tools comprising the Value Set Workbench.\n\n\nBefore You Begin\n\n\nThe Value Set Workbench requires minimal dependencies to install, but is dependent on having a running \nDocker\n installation. Ensure you have the following perquisites installed:\n\n\n\n\nDocker\n \n= 1.12.0\n\n\ndocker-compose\n \n= 1.8.0\n\n\n\n\nSpecific Docker installation instructions can be found for \nMac OSX\n, \nMS Windows 10\n, and a variety of \ncloud\n and \nLinux server\n configurations.\n\n\nThe following components will be installed as Docker containers:\n\n\n\n\nvalueset-workbench\n - The Value Set Workbench web-based user interface.\n\n\narangodb-service\n - A \nCTS2-compliant\n terminology service.\n\n\nvalueset-standardizer\n - An automated value set standardization service.\n\n\nvalueset-automap\n - An automated value set mapping service.\n\n\nAn \nElasticsearch\n service.\n\n\nAn \nArangoDB\n graph database.\n\n\n\n\nInstallation Steps (Quick Start)\n\n\n1\n2\n3\ngit clone https://github.com/valuesetworkbench/valueset-workbench-docker.git\ncd valueset-workbench-docker\n./start.sh\n\n\n\n\n\n\nBy default, when started the Value Set Workbench will be available at https://localhost/\n\n\nOn a Mac, you will need to substitute \nlocalhost\n with the IP address the Docker Machine. You can find this address by running \ndocker-machine ip\n.\n\n\nInstallation Steps (Customized)\n\n\nAn installation may be tailored in several ways by either introducint new files or adding parameters to the \n./start.sh\n script. These options are described below\n\n\nExternal Host Name\n\n\nIf you are deplying the Value Set Workbench in a production environment, you may need to tell it the hostname where it will be accessed. This is necessary for several functions including OAuth2 callbacks.\n\n\nYou may sepecify an external host via the \nstart.sh\n script:\n\n\n1\n./start.sh -h yourhost.com\n\n\n\n\n\n\nIf you do not provide an external host parameter, default behaviour depends on the deployment operating system:\n\n\n\n\nLinux\n - \nlocalhost\n\n\nOSX\n - the result of \ndocker-machine ip\n\n\n\n\nCustom Admin Password\n\n\nBy default, a new installation of the Value Set Workbench comes installed with an administator account loaded. This account by default has the username/password: \nadmin/admin\n\n\nThe admin account password may be randomized on install:\n\n\n1\n./start.sh -r\n\n\n\n\n\n\nThe \n-r\n option sets the admin password to a randomized string. The output text of \nstart.sh\n will display the password that it has generated:\n\n\n1\n2\n3\nValue Set Workbench is starting at https://192.168.99.100/\n * NOTE: Service may take a few minutes to start.\nAdmin username/password: admin/VIw9+mNh+KRs8KqCp^eftaqSD03Hop%N\n\n\n\n\n\n\nCustom OAuth2\n\n\nThe Value Set Workbench allows integrates with your existing OAuth2 strategy. See \nhere for details\n.\n\n\nCustom Terms/Privacy Statements\n\n\nCustomized Terms of Use and Privacy statements are may be added to align with different institutional policies. To substitute custom versions of these files, add either a \nterms.txt\n or \nprivacy.txt\n (or both) to the \nvalueset-workbench-docker/valueset-workbench/policy\n directory. These files may be in plain-text or \nMarkdown\n format.\n\n\nCustom SSL\n\n\nBy default, the Value Set Workbench will deploy with a self-signed SSL certificate. To use your own, place your custom Private Key and Certificate in the following locations:\n\n\n\n\nPrivate key:\n \nvalueset-workbench-docker/ssl/key.pem\n\n\nCertificate:\n \nvalueset-workbench-docker/ssl/ca.pem", 
             "title": "Installation"
         }, 
         {
             "location": "/installation/#installation", 
-            "text": "The Value Set Workbench includes a  Docker Compose -based system for deploying the suite of tools comprising the Value Set Workbench.  The following components will be installed:   valueset-workbench  - The Value Set Workbench web-based user interface.  arangodb-service  - A  CTS2-compliant  terminology service.  valueset-standardizer  - An automated value set standardization service.  valueset-automap  - An automated value set mapping service.  An  Elasticsearch  service.  An  ArangoDB  graph database.", 
+            "text": "The Value Set Workbench includes a  Docker Compose -based system for deploying the suite of tools comprising the Value Set Workbench.", 
             "title": "Installation"
         }, 
         {
-            "location": "/installation/#prerequisites", 
-            "text": "Docker   = 1.12.0  docker-compose   = 1.8.0", 
-            "title": "Prerequisites"
+            "location": "/installation/#before-you-begin", 
+            "text": "The Value Set Workbench requires minimal dependencies to install, but is dependent on having a running  Docker  installation. Ensure you have the following perquisites installed:   Docker   = 1.12.0  docker-compose   = 1.8.0   Specific Docker installation instructions can be found for  Mac OSX ,  MS Windows 10 , and a variety of  cloud  and  Linux server  configurations.  The following components will be installed as Docker containers:   valueset-workbench  - The Value Set Workbench web-based user interface.  arangodb-service  - A  CTS2-compliant  terminology service.  valueset-standardizer  - An automated value set standardization service.  valueset-automap  - An automated value set mapping service.  An  Elasticsearch  service.  An  ArangoDB  graph database.", 
+            "title": "Before You Begin"
         }, 
         {
-            "location": "/installation/#installation-steps", 
+            "location": "/installation/#installation-steps-quick-start", 
             "text": "1\n2\n3 git clone https://github.com/valuesetworkbench/valueset-workbench-docker.git\ncd valueset-workbench-docker\n./start.sh   By default, when started the Value Set Workbench will be available at https://localhost/  On a Mac, you will need to substitute  localhost  with the IP address the Docker Machine. You can find this address by running  docker-machine ip .", 
-            "title": "Installation Steps"
+            "title": "Installation Steps (Quick Start)"
         }, 
         {
-            "location": "/installation/#configuration-options", 
-            "text": "", 
-            "title": "Configuration Options"
+            "location": "/installation/#installation-steps-customized", 
+            "text": "An installation may be tailored in several ways by either introducint new files or adding parameters to the  ./start.sh  script. These options are described below", 
+            "title": "Installation Steps (Customized)"
         }, 
         {
             "location": "/installation/#external-host-name", 
-            "text": "If you are deplying the Value Set Workbench in a production environment, you may need to tell it the hostname where it will be accessed. This is necessary for several functions including OAuth2 callbacks.  You may sepecify an external host via the  start.sh  script:  1 ./start.sh yourhost.com   If you do not provide an external host parameter, default behaviour depends on the deployment operating system:   Linux  -  localhost  OSX  - the result of  docker-machine ip", 
+            "text": "If you are deplying the Value Set Workbench in a production environment, you may need to tell it the hostname where it will be accessed. This is necessary for several functions including OAuth2 callbacks.  You may sepecify an external host via the  start.sh  script:  1 ./start.sh -h yourhost.com   If you do not provide an external host parameter, default behaviour depends on the deployment operating system:   Linux  -  localhost  OSX  - the result of  docker-machine ip", 
             "title": "External Host Name"
+        }, 
+        {
+            "location": "/installation/#custom-admin-password", 
+            "text": "By default, a new installation of the Value Set Workbench comes installed with an administator account loaded. This account by default has the username/password:  admin/admin  The admin account password may be randomized on install:  1 ./start.sh -r   The  -r  option sets the admin password to a randomized string. The output text of  start.sh  will display the password that it has generated:  1\n2\n3 Value Set Workbench is starting at https://192.168.99.100/\n * NOTE: Service may take a few minutes to start.\nAdmin username/password: admin/VIw9+mNh+KRs8KqCp^eftaqSD03Hop%N", 
+            "title": "Custom Admin Password"
         }, 
         {
             "location": "/installation/#custom-oauth2", 
             "text": "The Value Set Workbench allows integrates with your existing OAuth2 strategy. See  here for details .", 
             "title": "Custom OAuth2"
+        }, 
+        {
+            "location": "/installation/#custom-termsprivacy-statements", 
+            "text": "Customized Terms of Use and Privacy statements are may be added to align with different institutional policies. To substitute custom versions of these files, add either a  terms.txt  or  privacy.txt  (or both) to the  valueset-workbench-docker/valueset-workbench/policy  directory. These files may be in plain-text or  Markdown  format.", 
+            "title": "Custom Terms/Privacy Statements"
         }, 
         {
             "location": "/installation/#custom-ssl", 

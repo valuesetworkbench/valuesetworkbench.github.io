@@ -178,22 +178,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
-    Prerequisites
+  <a href="#before-you-begin" title="Before You Begin" class="md-nav__link">
+    Before You Begin
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#installation-steps" title="Installation Steps" class="md-nav__link">
-    Installation Steps
+  <a href="#installation-steps-quick-start" title="Installation Steps (Quick Start)" class="md-nav__link">
+    Installation Steps (Quick Start)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuration-options" title="Configuration Options" class="md-nav__link">
-    Configuration Options
+  <a href="#installation-steps-customized" title="Installation Steps (Customized)" class="md-nav__link">
+    Installation Steps (Customized)
   </a>
   
     <nav class="md-nav">
@@ -207,8 +207,22 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#custom-admin-password" title="Custom Admin Password" class="md-nav__link">
+    Custom Admin Password
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#custom-oauth2" title="Custom OAuth2" class="md-nav__link">
     Custom OAuth2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-termsprivacy-statements" title="Custom Terms/Privacy Statements" class="md-nav__link">
+    Custom Terms/Privacy Statements
   </a>
   
 </li>
@@ -303,22 +317,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
-    Prerequisites
+  <a href="#before-you-begin" title="Before You Begin" class="md-nav__link">
+    Before You Begin
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#installation-steps" title="Installation Steps" class="md-nav__link">
-    Installation Steps
+  <a href="#installation-steps-quick-start" title="Installation Steps (Quick Start)" class="md-nav__link">
+    Installation Steps (Quick Start)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuration-options" title="Configuration Options" class="md-nav__link">
-    Configuration Options
+  <a href="#installation-steps-customized" title="Installation Steps (Customized)" class="md-nav__link">
+    Installation Steps (Customized)
   </a>
   
     <nav class="md-nav">
@@ -332,8 +346,22 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#custom-admin-password" title="Custom Admin Password" class="md-nav__link">
+    Custom Admin Password
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#custom-oauth2" title="Custom OAuth2" class="md-nav__link">
     Custom OAuth2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-termsprivacy-statements" title="Custom Terms/Privacy Statements" class="md-nav__link">
+    Custom Terms/Privacy Statements
   </a>
   
 </li>
@@ -367,7 +395,14 @@
                 
                 <h1 id="installation">Installation</h1>
 <p>The Value Set Workbench includes a <a href="https://docs.docker.com/compose/">Docker Compose</a>-based system for deploying the suite of tools comprising the Value Set Workbench.</p>
-<p>The following components will be installed:</p>
+<h2 id="before-you-begin">Before You Begin</h2>
+<p>The Value Set Workbench requires minimal dependencies to install, but is dependent on having a running <a href="https://docs.docker.com/">Docker</a> installation. Ensure you have the following perquisites installed:</p>
+<ul>
+<li><a href="https://docs.docker.com/engine/installation/">Docker</a> &gt;= 1.12.0</li>
+<li><a href="https://docs.docker.com/compose/install/">docker-compose</a> &gt;= 1.8.0</li>
+</ul>
+<p>Specific Docker installation instructions can be found for <a href="https://docs.docker.com/docker-for-mac/install/">Mac OSX</a>, <a href="https://docs.docker.com/docker-for-windows/install/">MS Windows 10</a>, and a variety of <a href="https://docs.docker.com/engine/installation/#cloud">cloud</a> and <a href="https://docs.docker.com/engine/installation/#server">Linux server</a> configurations.</p>
+<p>The following components will be installed as Docker containers:</p>
 <ul>
 <li><a href="https://github.com/valuesetworkbench/valueset-workbench">valueset-workbench</a> - The Value Set Workbench web-based user interface.</li>
 <li><a href="https://github.com/valuesetworkbench/arangodb-service">arangodb-service</a> - A <a href="http://www.omg.org/spec/CTS2/">CTS2-compliant</a> terminology service.</li>
@@ -376,12 +411,7 @@
 <li>An <a href="https://www.elastic.co/products/elasticsearch">Elasticsearch</a> service.</li>
 <li>An <a href="https://www.arangodb.com/">ArangoDB</a> graph database.</li>
 </ul>
-<h2 id="prerequisites">Prerequisites</h2>
-<ul>
-<li><a href="https://docs.docker.com/engine/installation/">Docker</a> &gt;= 1.12.0</li>
-<li><a href="https://docs.docker.com/compose/install/">docker-compose</a> &gt;= 1.8.0</li>
-</ul>
-<h2 id="installation-steps">Installation Steps</h2>
+<h2 id="installation-steps-quick-start">Installation Steps (Quick Start)</h2>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git clone https://github.com/valuesetworkbench/valueset-workbench-docker.git
@@ -392,11 +422,12 @@ cd valueset-workbench-docker
 
 <p>By default, when started the Value Set Workbench will be available at https://localhost/</p>
 <p>On a Mac, you will need to substitute <code>localhost</code> with the IP address the Docker Machine. You can find this address by running <code>docker-machine ip</code>.</p>
-<h2 id="configuration-options">Configuration Options</h2>
+<h2 id="installation-steps-customized">Installation Steps (Customized)</h2>
+<p>An installation may be tailored in several ways by either introducint new files or adding parameters to the <code>./start.sh</code> script. These options are described below</p>
 <h3 id="external-host-name">External Host Name</h3>
 <p>If you are deplying the Value Set Workbench in a production environment, you may need to tell it the hostname where it will be accessed. This is necessary for several functions including OAuth2 callbacks.</p>
 <p>You may sepecify an external host via the <code>start.sh</code> script:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>./start.sh yourhost.com
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>./start.sh -h yourhost.com
 </pre></div>
 </td></tr></table>
 
@@ -405,8 +436,26 @@ cd valueset-workbench-docker
 <li><strong>Linux</strong> - <code>localhost</code></li>
 <li><strong>OSX</strong> - the result of <code>docker-machine ip</code></li>
 </ul>
+<h3 id="custom-admin-password">Custom Admin Password</h3>
+<p>By default, a new installation of the Value Set Workbench comes installed with an administator account loaded. This account by default has the username/password: <code>admin/admin</code></p>
+<p>The admin account password may be randomized on install:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>./start.sh -r
+</pre></div>
+</td></tr></table>
+
+<p>The <code>-r</code> option sets the admin password to a randomized string. The output text of <code>start.sh</code> will display the password that it has generated:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Value Set Workbench is starting at https://192.168.99.100/
+ * NOTE: Service may take a few minutes to start.
+Admin username/password: admin/VIw9+mNh+KRs8KqCp^eftaqSD03Hop%N
+</pre></div>
+</td></tr></table>
+
 <h3 id="custom-oauth2">Custom OAuth2</h3>
 <p>The Value Set Workbench allows integrates with your existing OAuth2 strategy. See <a href="../custom_oauth">here for details</a>.</p>
+<h3 id="custom-termsprivacy-statements">Custom Terms/Privacy Statements</h3>
+<p>Customized Terms of Use and Privacy statements are may be added to align with different institutional policies. To substitute custom versions of these files, add either a <code>terms.txt</code> or <code>privacy.txt</code> (or both) to the <code>valueset-workbench-docker/valueset-workbench/policy</code> directory. These files may be in plain-text or <a href="https://daringfireball.net/projects/markdown/syntax">Markdown</a> format.</p>
 <h3 id="custom-ssl">Custom SSL</h3>
 <p>By default, the Value Set Workbench will deploy with a self-signed SSL certificate. To use your own, place your custom Private Key and Certificate in the following locations:</p>
 <ul>
