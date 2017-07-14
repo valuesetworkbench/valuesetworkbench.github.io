@@ -472,13 +472,18 @@
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong><em>Execute the Installation Script.</em></strong></li>
 </ul>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cd valueset-workbench-docker
-./start.sh
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cd valueset-workbench-docker
+./start.sh (for Mac/Linux)
+./start.bat (for Windows)
 </pre></div>
 </td></tr></table>
 
-<p>By default, when started the Value Set Workbench will be available at https://localhost/</p>
-<p>On a Mac, you will need to substitute <code>localhost</code> with the IP address the Docker Machine. You can find this address by running <code>docker-machine ip</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This Quick Start installations should be used for local workstation installations only! This will generate a self-signed certificate and leave the admin username/password set to the default (<code>admin/admin</code>). For more secure installation options, see below.</p>
+</div>
+<p>By default, when started the Value Set Workbench will be available at <code>https://localhost/</code>. For a Mac, the service will be available at IP address the Docker Machine. You can find this address by running <code>docker-machine ip</code>.</p>
 <h2 id="installation-steps-customized">Installation Steps (Customized)</h2>
 <p>An installation may be tailored in several ways by either introducing new files or adding parameters to the <code>./start.sh</code> script. These options are described below</p>
 <h3 id="external-host-name">External Host Name</h3>
@@ -490,13 +495,14 @@
 
 <p>If you do not provide an external host parameter, default behaviour depends on the deployment operating system:</p>
 <ul>
-<li><strong>Linux</strong> - <code>localhost</code></li>
+<li><strong>Linux</strong> - <code>$HOST</code></li>
 <li><strong>OSX</strong> - the result of <code>docker-machine ip</code></li>
+<li><strong>Windows</strong> - <code>%COMPUTERNAME%</code></li>
 </ul>
 <h3 id="custom-admin-password">Custom Admin Password</h3>
 <p>By default, a new installation of the Value Set Workbench comes installed with an administator account loaded. This account by default has the username/password: <code>admin/admin</code></p>
 <p>The admin account password may be randomized on install:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>./start.sh -r
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>./start.sh/bat -r
 </pre></div>
 </td></tr></table>
 
