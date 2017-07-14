@@ -39,6 +39,8 @@
     
       <link rel="stylesheet" href="../stylesheets/extra.css">
     
+      <link rel="stylesheet" href="../stylesheets/bootstrap.min.css">
+    
     
   </head>
   
@@ -74,6 +76,10 @@
         <span class="md-flex__ellipsis md-header-nav__title">
           
             
+              
+                <span class="md-header-nav__parent">
+                  Install Guide
+                </span>
               
             
             Installation
@@ -148,6 +154,27 @@
       
       
       
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Install Guide
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Install Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
 
   
 
@@ -247,16 +274,21 @@
     
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
     <a href="../custom_oauth/" title="Custom OAuth2" class="md-nav__link">
       Custom OAuth2
     </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -292,6 +324,18 @@
   <li class="md-nav__item">
     <a href="../links/" title="Links" class="md-nav__link">
       Links
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../contact/" title="Contact Us" class="md-nav__link">
+      Contact Us
     </a>
   </li>
 
@@ -412,10 +456,23 @@
 <li>An <a href="https://www.arangodb.com/">ArangoDB</a> graph database.</li>
 </ul>
 <h2 id="installation-steps-quick-start">Installation Steps (Quick Start)</h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong><em>Download the Installer.</em></strong> If you have <a href="https://git-scm.com/book/id/v2/Getting-Started-Installing-Git">Git</a> installed, you can clone the latest Docker installation scripts:</li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git clone https://github.com/valuesetworkbench/valueset-workbench-docker.git
+</pre></div>
+</td></tr></table>
+
+<p>Or <a href="https://github.com/valuesetworkbench/valueset-workbench-docker/archive/master.zip">download the zip</a> if you don't have Git installed.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Downloading and unzipping the above zip file will result in a directory called <code>valueset-workbench-docker-master</code>. To align with further instructions below, rename that directory to <code>valueset-workbench-docker</code>.</p>
+</div>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong><em>Execute the Installation Script.</em></strong></li>
+</ul>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git clone https://github.com/valuesetworkbench/valueset-workbench-docker.git
-cd valueset-workbench-docker
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cd valueset-workbench-docker
 ./start.sh
 </pre></div>
 </td></tr></table>
@@ -423,9 +480,9 @@ cd valueset-workbench-docker
 <p>By default, when started the Value Set Workbench will be available at https://localhost/</p>
 <p>On a Mac, you will need to substitute <code>localhost</code> with the IP address the Docker Machine. You can find this address by running <code>docker-machine ip</code>.</p>
 <h2 id="installation-steps-customized">Installation Steps (Customized)</h2>
-<p>An installation may be tailored in several ways by either introducint new files or adding parameters to the <code>./start.sh</code> script. These options are described below</p>
+<p>An installation may be tailored in several ways by either introducing new files or adding parameters to the <code>./start.sh</code> script. These options are described below</p>
 <h3 id="external-host-name">External Host Name</h3>
-<p>If you are deplying the Value Set Workbench in a production environment, you may need to tell it the hostname where it will be accessed. This is necessary for several functions including OAuth2 callbacks.</p>
+<p>If you are deploying the Value Set Workbench in a production environment, you may need to tell it the hostname where it will be accessed. This is necessary for several functions including OAuth2 callbacks.</p>
 <p>You may sepecify an external host via the <code>start.sh</code> script:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>./start.sh -h yourhost.com
 </pre></div>

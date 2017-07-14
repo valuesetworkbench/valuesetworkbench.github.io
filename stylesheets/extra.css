@@ -2,3 +2,28 @@
     margin: 10px;
     display: flex;
 }
+
+.main-points-heading {
+    text-align: center;
+    font-weight: bold !important;
+}
+
+.text-justify {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.main-points-icon {
+    height: 200px;
+    width: 200px;
+}
+
+.title-text {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.main-points-div {
+    background-color: #eee;
+    padding: 10px;
+}

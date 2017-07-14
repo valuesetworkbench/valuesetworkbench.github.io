@@ -4,31 +4,31 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-07-13</lastmod>
+     <lastmod>2017-07-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
+        
     <url>
      <loc>/installation/</loc>
-     <lastmod>2017-07-13</lastmod>
+     <lastmod>2017-07-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>/custom_oauth/</loc>
-     <lastmod>2017-07-13</lastmod>
+     <lastmod>2017-07-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
     
 
     
     <url>
      <loc>/components/</loc>
-     <lastmod>2017-07-13</lastmod>
+     <lastmod>2017-07-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -36,7 +36,7 @@
     
     <url>
      <loc>/research/</loc>
-     <lastmod>2017-07-13</lastmod>
+     <lastmod>2017-07-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -44,7 +44,15 @@
     
     <url>
      <loc>/links/</loc>
-     <lastmod>2017-07-13</lastmod>
+     <lastmod>2017-07-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/contact/</loc>
+     <lastmod>2017-07-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
