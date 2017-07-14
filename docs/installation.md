@@ -35,16 +35,19 @@ Or [download the zip](https://github.com/valuesetworkbench/valueset-workbench-do
 * [x] ***Execute the Installation Script.***
 ```
 cd valueset-workbench-docker
-./start.sh
+./start.sh (for Mac/Linux)
+./start.bat (for Windows)
 ```
-By default, when started the Value Set Workbench will be available at https://localhost/
 
-On a Mac, you will need to substitute ```localhost``` with the IP address the Docker Machine. You can find this address by running ```docker-machine ip```.
+!!! warning
+    This Quick Start installations should be used for local workstation installations only! This will generate a self-signed certificate and leave the admin username/password set to the default (```admin/admin```). For more secure installation options, see below.
+
+By default, when started the Value Set Workbench will be available at ```https://localhost/```. For a Mac, the service will be available at IP address the Docker Machine. You can find this address by running ```docker-machine ip```.
 
 ## Installation Steps (Customized)
 An installation may be tailored in several ways by either introducing new files or adding parameters to the ```./start.sh``` script. These options are described below
 
-### External Host Name
+### External Host Name    
 If you are deploying the Value Set Workbench in a production environment, you may need to tell it the hostname where it will be accessed. This is necessary for several functions including OAuth2 callbacks.
 
 You may sepecify an external host via the ```start.sh``` script:
@@ -54,15 +57,16 @@ You may sepecify an external host via the ```start.sh``` script:
 
 If you do not provide an external host parameter, default behaviour depends on the deployment operating system:
 
-* **Linux** - ```localhost```
+* **Linux** - ```$HOST```
 * **OSX** - the result of ```docker-machine ip```
+* **Windows** - ```%COMPUTERNAME%```
 
-### Custom Admin Password
+### Custom Admin Password    
 By default, a new installation of the Value Set Workbench comes installed with an administator account loaded. This account by default has the username/password: ```admin/admin```
 
 The admin account password may be randomized on install:
 ```
-./start.sh -r
+./start.sh/bat -r
 ```
  
 The ```-r``` option sets the admin password to a randomized string. The output text of ```start.sh``` will display the password that it has generated:
