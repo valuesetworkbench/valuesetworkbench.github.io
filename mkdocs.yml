@@ -3,22 +3,26 @@ theme: material
 theme_dir: theme
 pages:
   - Home: index.md
-  - Installation: installation.md
-  - Custom OAuth2: custom_oauth.md
+  - Install Guide:
+    - Installation: installation.md
+    - Custom OAuth2: custom_oauth.md
   #- User Guide: user_guide.md
   #- Admininstration: admininstration.md
   - Components: components.md
   - Research: research.md
   - Links: links.md
+  - Contact Us: contact.md
 
 markdown_extensions:
   - markdown_include.include:
   - admonition
   - codehilite(linenums=true)
+  - pymdownx.tasklist(custom_checkbox=true)
 
 copyright: "© Value Set Workbench 2017"
 extra:
   logo: 'images/vsw_logo_transparent.png'
 extra_css:
   - 'stylesheets/extra.css'
+  - 'stylesheets/bootstrap.min.css'
 

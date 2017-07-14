@@ -20,8 +20,20 @@ The following components will be installed as Docker containers:
 
 
 ## Installation Steps (Quick Start)
+
+* [x] ***Download the Installer.*** If you have [Git](https://git-scm.com/book/id/v2/Getting-Started-Installing-Git) installed, you can clone the latest Docker installation scripts:
 ```
 git clone https://github.com/valuesetworkbench/valueset-workbench-docker.git
+```
+
+Or [download the zip](https://github.com/valuesetworkbench/valueset-workbench-docker/archive/master.zip) if you don't have Git installed.
+
+!!! info
+    Downloading and unzipping the above zip file will result in a directory called ```valueset-workbench-docker-master```. To align with further instructions below, rename that directory to ```valueset-workbench-docker```.
+
+
+* [x] ***Execute the Installation Script.***
+```
 cd valueset-workbench-docker
 ./start.sh
 ```
@@ -30,10 +42,10 @@ By default, when started the Value Set Workbench will be available at https://lo
 On a Mac, you will need to substitute ```localhost``` with the IP address the Docker Machine. You can find this address by running ```docker-machine ip```.
 
 ## Installation Steps (Customized)
-An installation may be tailored in several ways by either introducint new files or adding parameters to the ```./start.sh``` script. These options are described below
+An installation may be tailored in several ways by either introducing new files or adding parameters to the ```./start.sh``` script. These options are described below
 
 ### External Host Name
-If you are deplying the Value Set Workbench in a production environment, you may need to tell it the hostname where it will be accessed. This is necessary for several functions including OAuth2 callbacks.
+If you are deploying the Value Set Workbench in a production environment, you may need to tell it the hostname where it will be accessed. This is necessary for several functions including OAuth2 callbacks.
 
 You may sepecify an external host via the ```start.sh``` script:
 ```

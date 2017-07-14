@@ -1,4 +1,5 @@
-Peterson KJ, Jiang G, Brue SM, Liu H. Leveraging terminology services for extract-transform-load processes: a user-centered approach. In: AMIA Annual Symposium Proceedings 2016 (Vol. 2016, p. 1010). American Medical Informatics Association.
+!!! cite
+    Peterson KJ, Jiang G, Brue SM, Liu H. Leveraging terminology services for extract-transform-load processes: a user-centered approach. In: AMIA Annual Symposium Proceedings 2016 (Vol. 2016, p. 1010). American Medical Informatics Association.
 
 **Manuscript** - [HTML](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5333225/)/[PDF](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5333225/pdf/2497334.pdf)
 
